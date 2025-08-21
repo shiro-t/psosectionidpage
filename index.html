@@ -1,0 +1,193 @@
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="Shift_JIS">
+<title>ID Calc</title>
+<script>
+function Check()
+{
+var I, ID_N;
+var NAM;
+
+    NAM = document.Form.NAMETEXT.value;
+    ID_N = 0;
+
+    //チェック
+    for(I=0 ; I<=NAM.length -1 ; I++){
+	ID_N = ID_N + (NAM.charCodeAt(I));
+    }
+
+    if(ID_N==0){
+        document.Form.ID.value ="↑名前を入力";
+    }
+    else{
+        switch(ID_N % 10){
+            case 0:
+                document.Form.ID.value = "0: VIRIDIA";
+                break;
+            case 1:
+                document.Form.ID.value = "1: GREENILE";
+                break;
+            case 2:
+                document.Form.ID.value = "2: SKYLY";
+                break;
+            case 3:
+                document.Form.ID.value = "3: BLUEFULL";
+                break;
+            case 4:
+                document.Form.ID.value = "4: PURPLENUM";
+                break;
+            case 5:
+                document.Form.ID.value = "5: PINKAL";
+                break;
+            case 6:
+                document.Form.ID.value = "6: REDRIA";
+                break;
+            case 7:
+                document.Form.ID.value = "7: ORAN";
+                break;
+            case 8:
+                document.Form.ID.value = "8: YELLOWBOZE";
+                break;
+            case 9:
+                document.Form.ID.value = "9: WHITILL";
+                break;
+        }
+    }
+
+}
+</script>
+</head> 
+<body>
+
+<div style="font-size:x-large;" >ID計算</div>
+<div class="midt2">
+    <form name="Form" style="font-size:larger;">
+        <input TYPE="text" name="NAMETEXT" size=18 maxlength=12 style="ime-mode:disabled;" onkeyup="Check()"><br>
+        <input TYPE="text" name="ID" size=18 maxlength=12 value="↑名前を入力" class="button" onFocus="document.Form.NAMETEXT.focus()">
+    </form>
+</div>
+</div>
+<div>
+<style type="text/css">
+.chartable {
+    width:           259px;
+    border-collapse: collapse;
+    border: 1px solid gray;
+
+}
+.chartable td {
+    width:      25px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+.header {
+    background-color: lightgray;
+}
+
+.header td {
+    width:      25px;
+    text-align: center;
+    background-color: lightgray;
+    border: 1px solid white;
+}
+
+style="border:1px solid white;">
+</style>
+<table class="chartable">
+  <tr bgcolor=lightgray>
+    <td bgcolor="#007900"><font color=white>V</font></td>
+	<td bgcolor="#00BF00"><font color=white>G<font></td>
+    <td bgcolor="#00FFFF">S</td>
+	<td bgcolor="#0000FF"><font color=white>B</font></td>
+    <td bgcolor="#C420C4"><font color=white>PU</font></td>
+	<td bgcolor="#FF8080">PI<font></td>
+    <td bgcolor="#FF0000"><font color=white>R</td>
+	<td bgcolor="#FEC412">O</td>
+    <td bgcolor="#FFFF00">Y</td>
+	<td bgcolor="#FFFFFF">W</td>
+  </tr>
+  <tr class="header">
+    <td >0</td>	<td >1</td>
+    <td >2</td> <td >3</td>
+    <td >4</td> <td >5</td>
+    <td >6</td> <td >7</td>
+    <td >8</td> <td >9</td>
+  </tr>
+  <tr>
+    <td >　</td>		<td >　</td>
+    <td >SP</td>		<td >!</td>
+    <td >&quot;</td>	<td >#</td>
+    <td >$</td>			<td >%</td>
+    <td >&amp;</td>		<td >'</td>
+  </tr>
+  <tr>
+    <td >(</td>		<td >)</td>
+    <td >*</td>		<td >+</td>
+    <td >,</td>		<td >-</td>
+    <td >.</td>		<td >/</td>
+    <td >0</td>		<td >1</td>
+  </tr>
+  <tr>
+    <td >2</td>		<td >3</td>
+    <td >4</td>		<td >5</td>
+    <td >6</td>		<td >7</td>
+    <td >8</td>		<td >9</td>
+    <td >:</td>		<td >;</td>
+  </tr>
+  <tr>
+    <td >&lt;</td>	<td >=</td>
+    <td >&gt;</td>	<td >?</td>
+    <td >@</td>		<td >A</td>
+    <td >B</td>		<td >C</td>
+    <td >D</td>		<td >E</td>
+  </tr>
+  <tr>
+    <td >F</td>		<td >G</td>
+    <td >H</td>		<td >I</td>
+    <td >J</td>		<td >K</td>
+    <td >L</td>		<td >M</td>
+    <td >N</td>		<td >O</td>
+  </tr>
+  <tr>
+    <td >P</td>		<td >Q</td>
+    <td >R</td>		<td >S</td>
+    <td >T</td>		<td >U</td>
+    <td >V</td>		<td >W</td>
+    <td >X</td>		<td >Y</td>
+  </tr>
+  <tr>
+    <td >Z</td>		<td >[</td>
+    <td >\</td>		<td >]</td>
+    <td >^</td>		<td >_</td>
+    <td >`</td>		<td >a</td>
+    <td >b</td>		<td >c</td>
+  </tr>
+  <tr>
+    <td >d</td>		<td >e</td>
+    <td >f</td>		<td >g</td>
+    <td >h</td>		<td >i</td>
+    <td >j</td>		<td >k</td>
+    <td >l</td>		<td >m</td>
+  </tr>
+  <tr>
+    <td >n</td>		<td >o</td>
+    <td >p</td>		<td >q</td>
+    <td >r</td>		<td >s</td>
+    <td >t</td>		<td >u</td>
+    <td >v</td>		<td >w</td>
+  </tr>
+  <tr>
+    <td >x</td>		<td >y</td>
+    <td >z</td>		<td >{</td>
+    <td >|</td>		<td >}</td>
+    <td >~</td>		<td >　</td>
+    <td >　</td>					<td >　</td>
+  </tr>
+</TABLE>
+</div>
+
+</body>
+
+
+
+</html>
