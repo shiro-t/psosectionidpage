@@ -1,6 +1,5 @@
 <html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="Shift_JIS">
 <title>ID Calc</title>
 <script>
 function Check()
@@ -11,13 +10,13 @@ var NAM;
     NAM = document.Form.NAMETEXT.value;
     ID_N = 0;
 
-    //É`ÉFÉbÉN
+    //„ÉÅ„Çß„ÉÉ„ÇØ
     for(I=0 ; I<=NAM.length -1 ; I++){
 	ID_N = ID_N + (NAM.charCodeAt(I));
     }
 
     if(ID_N==0){
-        document.Form.ID.value ="Å™ñºëOÇì¸óÕ";
+        document.Form.ID.value ="‚ÜëÂêçÂâç„ÇíÂÖ•Âäõ";
     }
     else{
         switch(ID_N % 10){
@@ -59,11 +58,11 @@ var NAM;
 </head> 
 <body>
 
-<div style="font-size:x-large;" >IDåvéZ</div>
+<div style="font-size:x-large;" >IDË®àÁÆó</div>
 <div class="midt2">
     <form name="Form" style="font-size:larger;">
         <input TYPE="text" name="NAMETEXT" size=18 maxlength=12 style="ime-mode:disabled;" onkeyup="Check()"><br>
-        <input TYPE="text" name="ID" size=18 maxlength=12 value="Å™ñºëOÇì¸óÕ" class="button" onFocus="document.Form.NAMETEXT.focus()">
+        <input TYPE="text" name="ID" size=18 maxlength=12 value="‚ÜëÂêçÂâç„ÇíÂÖ•Âäõ" class="button" onFocus="document.Form.NAMETEXT.focus()">
     </form>
 </div>
 </div>
@@ -114,7 +113,7 @@ style="border:1px solid white;">
     <td >8</td> <td >9</td>
   </tr>
   <tr>
-    <td >Å@</td>		<td >Å@</td>
+    <td >„ÄÄ</td>		<td >„ÄÄ</td>
     <td >SP</td>		<td >!</td>
     <td >&quot;</td>	<td >#</td>
     <td >$</td>			<td >%</td>
@@ -180,8 +179,8 @@ style="border:1px solid white;">
     <td >x</td>		<td >y</td>
     <td >z</td>		<td >{</td>
     <td >|</td>		<td >}</td>
-    <td >~</td>		<td >Å@</td>
-    <td >Å@</td>					<td >Å@</td>
+    <td >~</td>		<td >„ÄÄ</td>
+    <td >„ÄÄ</td>					<td >„ÄÄ</td>
   </tr>
 </TABLE>
 </div>
