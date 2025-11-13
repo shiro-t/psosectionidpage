@@ -55,28 +55,35 @@ var NAM;
 
 }
 </script>
-</head> 
-<body>
 
-<div style="font-size:x-large;" >ID計算</div>
-<div class="midt2">
-    <form name="Form" style="font-size:larger;">
-        <input TYPE="text" name="NAMETEXT" size=18 maxlength=12 style="ime-mode:disabled;" onkeyup="Check()"><br>
-        <input TYPE="text" name="ID" size=18 maxlength=12 value="↑名前を入力" class="button" onFocus="document.Form.NAMETEXT.focus()">
-    </form>
-</div>
-</div>
-<div>
 <style type="text/css">
+html {
+    font-size: 62.5%;
+}
+
+.idcalc {
+    font-size: clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem);
+}
+
+.nameform input {
+    font-size: clamp(1.2rem, calc(1rem + 0.625vw), 1.7em);
+}
+
+/* Table */
+
 .chartable {
-    width:           259px;
+    width: 100%;
+    max-width: 1200px;
     border-collapse: collapse;
     border: 1px solid gray;
 
 }
 .chartable td {
-    width:      25px;
+    /* width:      25px; */
+    max-width: 119px;
+    width: calc( 119/1200) *100% );
     text-align: center;
+    font-size: clamp(1.2rem, calc(1rem + 0.625vw), 1.7em);
     border: 1px solid lightgray;
 }
 .header {
@@ -84,14 +91,26 @@ var NAM;
 }
 
 .header td {
-    width:      25px;
+    max-width: 119px;
+    width: calc( 119/1200) *100% );
     text-align: center;
+    font-size: clamp(1.2rem, calc(1rem + 0.625vw), 1.7em);
     background-color: lightgray;
     border: 1px solid white;
 }
-
-style="border:1px solid white;">
 </style>
+
+</head> 
+<body>
+<div class="idcalc" >ID計算</div>
+    <div class="midt2">
+        <form name="Form" class="nameform">
+            <input TYPE="text" name="NAMETEXT" size=18 maxlength=12 style="ime-mode:disabled;" onkeyup="Check()"><br>
+            <input TYPE="text" name="ID" size=18 maxlength=12 value="↑名前を入力" class="button" onFocus="document.Form.NAMETEXT.focus()">
+        </form>
+    </div>
+</div>
+<div>
 <table class="chartable">
   <tr bgcolor=lightgray>
     <td bgcolor="#007900"><font color=white>V</font></td>
