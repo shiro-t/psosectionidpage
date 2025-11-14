@@ -57,12 +57,18 @@ var NAM;
 </script>
 
 <style type="text/css">
+
+html {
+    max-width: 600px;
+    font-size: 16px;
+}
+
 .idcalc {
-    font-size: 6vw;
+   font-size: clamp( 1.8rem, 3vw, 3rem );
 }
 
 .nameform input {
-    font-size: 5vw;
+   font-size: clamp( 0.9rem, 2.5vw, 2.3rem );
 }
 
 /* Table */
@@ -74,9 +80,9 @@ var NAM;
 
 }
 .chartable td {
-    width: 5vw;
+    width: 6vw;
+    font-size: clamp( 1vw, 2.8vw, 2rem);
     text-align: center;
-    font-size: 4vw;
     border: 1px solid lightgray;
 }
 .header {
@@ -84,9 +90,9 @@ var NAM;
 }
 
 .header td {
-    width: 5vw;
+    width: 6vw;
+    font-size: clamp( 0.8vw, 2.8vw, 2rem);
     text-align: center;
-    font-size: 4vw;
     background-color: lightgray;
     border: 1px solid white;
 }
@@ -95,8 +101,8 @@ var NAM;
 </head> 
 <body>
 <div class="idcalc" >ID計算</div>
-    <div class="midt2">
-        <form name="Form" class="nameform">
+    <div class="nameform">
+        <form name="Form"">
             <input TYPE="text" name="NAMETEXT" size=18 maxlength=12 style="ime-mode:disabled;" onkeyup="Check()"><br>
             <input TYPE="text" name="ID" size=18 maxlength=12 value="↑名前を入力" class="button" onFocus="document.Form.NAMETEXT.focus()">
         </form>
